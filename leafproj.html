@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name-"viewport" content="width=device-width, initial-scale =1">
+        <title> | LeafProj </title>
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    
+        <!--Font | Raleway-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+
+        <style>
+            body{
+                font-family: 'Raleway', sans-serif;
+                font-size: 15px;
+                background: #000;
+            }
+            .profile{
+                margin: 20px 0;
+            }
+            .profile-sidebar{
+                padding: 20px 0 10px 0;
+                background: #fff;
+            }
+            .profile-userpic img{
+                float:none;
+                margin: 0 auto;
+                width: 50%;
+                height: 50%;
+            }
+            .profile-usertitle{
+                text-align: center;
+                margin-top: 20px;
+            }
+            .profile-usertitle-name{
+                color: #5a7391;
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 7px;
+            }
+            .profile-usertitle-job{
+                text-transform: uppercase;
+                color: #4CAF50;
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+            .profile-userbuttons .btn{
+                text-transform: uppercase;
+                font-size: 11px;
+                font-weight: 600;
+                padding: 6px 15px;
+                margin-right: 5px;
+            }
+            .profile-userbuttons .btn:last-child{
+                margin-right: 0px;
+            }
+            .profile-usermenu{
+                margin-top: 30px;
+                margin-bottom: 490px;
+            }
+            .profile-usermenu ul li{
+                border-bottom: 1px solid #f0f4f7;
+            }
+            .profile-usermenu ul li a{
+                color: #93a3b5;
+                font-size: 14px;
+                font-weight: 400;
+            }
+            .profile-usermenu ul li a i{
+                margin-right: 8px;
+                font-size: 14px;
+            }
+            .profile-usermenu ul li a:hover{
+                background-color: #fafcfd;
+                color: #4CAF50;
+            }
+            .profile-usermenu ul li.active{
+                border-bottom: none;
+            }
+            .profile-usermenu ul li.active a{
+                color: #4CAF50;
+                background-color: #f6f9fb;
+                border-left: 2px solif #4CAF50;
+                margin-left: -2px;
+            }
+            ul.pagination {
+                display: inline-block;
+                padding: 0;
+                margin: 0;
+            }
+
+            ul.pagination li {display: inline;}
+
+            ul.pagination li a {
+                color: black;
+                float: left;
+                padding: 8px 16px;
+                text-decoration: none;
+                transition: background-color .3s;
+                border: 1px solid #ddd;
+            }
+
+            ul.pagination li a.active {
+                background-color: #4CAF50;
+                color: white;
+                border: 1px solid #4CAF50;
+            }
+            
+            /* links */
+.nfl a, .mlb a, .nhl a, .pga a {
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+.nfl a {
+  color: #4fc0d2;
+}
+
+.nfl a:hover {
+  color: #268695;
+}
+
+.mlb a {
+  color: #52d29a;
+}
+
+.mlb a:hover {
+  color: #279766;
+}
+
+.nhl a {
+  color: rgba(231, 196, 104, 0.7);
+}
+
+.nhl a:hover {
+  color: rgba(201, 154, 32, 0.7);
+}
+
+.pga a {
+  color: #eb7655;
+}
+
+.pga a:hover {
+  color: #c33d17;
+}
+
+/* wrapper */
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto 100px auto;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  position: relative;
+}
+
+/* lists */
+.row ul {
+  margin: 0;
+  padding: 0;
+}
+
+.row ul li {
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  list-style: none;
+  display: inline-block;
+  width: 20%;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+  .row ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .row ul li {
+    font-size: 13px;
+  }
+}
+
+.title ul li {
+  padding: 15px 13px;
+}
+
+.row ul li {
+  padding: 5px 10px;
+}
+
+/* rows */
+.row {
+  height: 30px;
+  padding-left: 10px;
+  font-size: 0;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.row:hover {
+  background-color: rgba(26, 26, 26, 0.9);
+  height: 65px;
+}
+@media only screen and (max-width: 767px) {
+  .row:hover {
+    height: 85px;
+  }
+}
+@media only screen and (max-width: 359px) {
+  .row:hover {
+    height: 105px;
+  }
+}
+
+.title {
+  margin-bottom: 0;
+  height: 33px;
+  font-size: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.title:hover {
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+@media only screen and (max-width: 767px) {
+  .title-hide {
+    display: none;
+  }
+}
+
+.nfl {
+  border-left: 3px solid #1c616c;
+}
+
+.nfl:hover {
+  border-left: 3px solid #4fc0d2;
+}
+
+.mlb {
+  border-left: 3px solid #1d6e4b;
+}
+
+.mlb:hover {
+  border-left: 3px solid #52d29a;
+}
+
+.nhl {
+  border-left: 3px solid rgba(157, 121, 25, 0.7);
+}
+
+.nhl:hover {
+  border-left: 3px solid rgba(231, 196, 104, 0.7);
+}
+
+.pga {
+  border-left: 3px solid #952f12;
+}
+
+.pga:hover {
+  border-left: 3px solid #eb7655;
+}
+
+/* row one - fadeIn */
+.row-fadeIn-wrapper {
+  opacity: 0;
+  font-size: 0;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-animation: fadeIn 0.4s ease-out 2s 1 alternate;
+          animation: fadeIn 0.4s ease-out 2s 1 alternate;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.row-fadeIn-wrapper:hover {
+  height: 35px;
+}
+@media only screen and (max-width: 767px) {
+  .row-fadeIn-wrapper:hover {
+    height: 55px;
+  }
+}
+@media only screen and (max-width: 359px) {
+  .row-fadeIn-wrapper:hover {
+    height: 75px;
+  }
+}
+
+
+
+
+/* more content */
+ul.more-content li {
+  position: relative;
+  font-size: 13px;
+  display: block;
+  height: 50px;
+  width: 100%;
+  color: rgba(128, 128, 128, 0.9);
+}
+@media only screen and (max-width: 767px) {
+  ul.more-content li {
+    font-size: 11px;
+  }
+}
+
+/* small content */
+.small {
+  color: rgba(102, 102, 102, 0.9);
+  font-size: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .small {
+    display: none;
+  }
+}
+
+        </style>
+    </head>
+    
+    <body>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="col-sm-2">
+                  <div class="profile-sidebar">
+                    <div class="profile-userpic">
+                        <img src="http://www.kentico.com/getmedia/1aa2ee98-155c-4453-b905-ec86d54f6ec6/Clink.png?pf=1&maxsidesize=200" class="img-responsive" alt="">
+                    </div>
+                    <div class="profile-usertitle">
+                        <div class="profile-usertitle-name">
+                            Raymund Bermejo
+                        </div>
+                        <div class="profile-usertitle-job">
+                            Project Manager
+                        </div>
+                    </div>
+                    <div class="profile-usermenu">
+                        <ul class="nav">
+                          <li class="active">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-home"></i>
+                                Dashboard</a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <i class="glyphicon glyphicon-align-left"></i>
+                                  Audit</a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <i class="glyphicon glyphicon-wrench"></i>
+                                  Info</a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <i class="glyphicon glyphicon-flag"></i>
+                                  Leaf Project</a>
+                          </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-10">
+                              <section class="wrapper">
+    <!-- Row title -->
+    <main class="row title">
+      <ul>
+        <li>I.D.</li>
+        <li>Name</li>
+        <li>Activity Type</li>
+        <li>Time</li>
+        <li>Date</li>
+      </ul>
+    </main>
+    <!-- Row 2 - fadeOut -->
+      <article class="row nfl">
+      <ul>
+        <li><a href="#">4090659</a></li>
+        <li>Andre Cauilan</li>
+        <li>Exit</li>
+        <li>6:56 p.m.</li>
+        <li>19/07/2016</li>
+      </ul>
+      <ul class="more-content">
+        <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+      </ul>
+    </article>
+    <!-- Row 3 -->
+    <article class="row nfl">
+      <ul>
+        <li><a href="#">4090659</a></li>
+        <li>Andre Cauilan</li>
+        <li>Entry</li>
+        <li>4:00 p.m.</li>
+        <li>19/07/2016</li>
+      </ul>
+      <ul class="more-content">
+        <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+      </ul>
+    </article>
+    <!-- Row 4 -->
+    <article class="row mlb update-row">
+      <ul>
+        <li><a href="#">MLB</a><span class="small">(update)</span></li>
+        <li>$10</li>
+        <li><span class="update1">1</span><span class="update2">2</span></li>
+        <li>10</li>
+      </ul>
+      <ul class="more-content">
+        <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+      </ul>
+    </article>
+    <!-- Row 5 -->
+    <article class="row mlb">
+      <ul>
+        <li><a href="#">MLB</a></li>
+        <li>$5</li>
+        <li>48</li>
+        <li>120</li>
+      </ul>
+      <ul class="more-content">
+        <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+      </ul>
+    </article>
+    <!-- Row 6 -->
+    <article class="row nhl">
+      <ul>
+        <li><a href="#">NHL</a></li>
+        <li>$50</li>
+        <li>12</li>
+        <li>48</li>
+      </ul>
+      <ul class="more-content">
+        <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+      </ul>
+    </article>
+    <!-- Row 7 -->
+    <article class="row nhl">
+      <ul>
+        <li><a href="#">NHL</a></li>
+        <li>$50</li>
+        <li>12</li>
+        <li>48</li>
+      </ul>
+      <ul class="more-content">
+        <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+      </ul>
+    </article>
+    <!-- Row 8 -->
+    <article class="row pga">
+      <ul>
+        <li><a href="#">PGA</a></li>
+        <li>$50</li>
+        <li>12</li>
+        <li>48</li>
+      </ul>
+      <ul class="more-content">
+        <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+      </ul>
+    </article>
+    <!-- Row 9 -->
+    <article class="row pga">
+      <ul>
+        <li><a href="#">PGA</a></li>
+        <li>$50</li>
+        <li>12</li>
+        <li>48</li>
+      </ul>
+      <ul class="more-content">
+        <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+      </ul>
+    </article>
+    <!-- Row 10 -->
+    <article class="row pga">
+      <ul>
+        <li><a href="#">PGA</a></li>
+        <li>$50</li>
+        <li>12</li>
+        <li>48</li>
+      </ul>
+      <ul class="more-content">
+        <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+      </ul>
+    </article>
+    <!-- Row 11 -->
+    <article class="row mlb">
+      <ul>
+        <li><a href="#">MLB</a></li>
+        <li>$10</li>
+        <li>1</li>
+        <li>10</li>
+      </ul>
+      <ul class="more-content">
+        <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+      </ul>
+    </article>
+  </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
